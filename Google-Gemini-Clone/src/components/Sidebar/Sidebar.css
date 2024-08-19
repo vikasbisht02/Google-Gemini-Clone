@@ -5,9 +5,12 @@
     justify-content: space-between;
     background-color: #e4f0ff;
     padding: 25px 15px;
+    width: 250px;
+    transition: width 0.3s ease;
 }
 
-.sidebar  img {
+
+.sidebar img {
     width: 20px;
 }
 
@@ -16,7 +19,6 @@
     margin-left: 10px;
     cursor: pointer;
 }
-
 
 .sidebar .new-chat {
     margin-top: 50px;
@@ -29,7 +31,7 @@
     font-size: 14px;
     color: gray;
     cursor: pointer;
-    margin-top: 50px;
+    transition: padding 0.3s ease, gap 0.3s ease;
 }
 
 .sidebar .recent {
@@ -45,7 +47,7 @@
 
 .sidebar .recent-entry {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 10px;
     padding: 10px;
     padding-right: 40px;
@@ -53,6 +55,7 @@
     color: #282828;
     cursor: pointer;
     font-size: 15px;
+    transition: padding 0.3s ease, gap 0.3s ease;
 }
 
 .sidebar .recent-entry:hover {
@@ -62,10 +65,71 @@
 .sidebar .bottom {
     display: flex;
     flex-direction: column;
-
 }
 
 .bottom-item {
     padding-right: 10px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding: 15px 10px;
+    }
+
+    .sidebar .new-chat, .sidebar .recent-entry, .bottom-item {
+        padding: 10px 5px;
+        gap: 5px;
+    }
+
+    .sidebar .recent-entry p,
+    .sidebar .bottom-item p {
+        display: none;
+    }
+
+    .sidebar .new-chat p {
+        display: none;
+    }
+
+    .sidebar .menu {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 50px;
+        padding: 10px 5px;
+    }
+
+    .sidebar img {
+        width: 18px;
+    }
+
+    .sidebar .new-chat,
+    .sidebar .recent-entry,
+    .bottom-item {
+        padding: 8px 4px;
+        gap: 4px;
+    }
+
+    .sidebar .new-chat p,
+    .sidebar .recent-entry p,
+    .bottom-item p {
+        display: none;
+    }
+
+    .sidebar .menu {
+        margin-left: 0;
+    }
+}
+
+/* Optional: Animation for expanding and collapsing the sidebar */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

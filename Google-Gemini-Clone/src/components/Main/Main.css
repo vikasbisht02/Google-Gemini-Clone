@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font: 22px;
+    font-size: 22px;
     padding: 20px;
     color: #585858;
 }
@@ -22,22 +22,22 @@
 .main-container {
     max-width: 900px;
     margin: auto;
-
+    padding: 0 15px;
 }
 
 .main .greet {
-    margin: 50px 0;
+    margin: 40px 0;
     font-size: 56px;
     color: #c4c7c5;
     font-weight: 500;
     padding: 20px;
+    
 }
 
 .main .greet span {
     background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .main .cards {
@@ -82,7 +82,6 @@
     max-width: 900px;
     padding: 0 20px;
     margin: auto;
-
 }
 
 .searchbox {
@@ -93,7 +92,6 @@
     background-color: #e1e4e6;
     padding: 10px 20px;
     border-radius: 50px;
-
 }
 
 .searchbox img {
@@ -183,22 +181,70 @@
     line-height: 1.8;
 }
 
-@media (max-widht:600px) {
-    .main-bottom input {
-        flex: none;
-        width: 150px;
-
-    }
-
-    .main-bottom img {
-        width: 20px;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main .greet {
+        font-size: 42px;
     }
 
     .searchbox {
-        padding: 5px 10px ;
+        padding: 10px 15px;
+        gap: 10px;
     }
 
-    .searchbox div {
+    .searchbox input {
+        font-size: 16px;
+    }
+
+    .main .cards {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .main .card {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main .greet {
+        font-size: 36px;
+    }
+
+    .main .nav {
+        font-size: 18px;
+    }
+
+    .main .cards {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .main .card {
+        height: 140px;
+    }
+
+    .main-bottom {
+        padding: 0 10px;
+    }
+
+    .searchbox {
         gap: 5px;
+        padding: 5px 10px;
+    }
+
+    .searchbox input {
+        font-size: 14px;
+    }
+
+    .result-title {
+        margin: 30px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .result-data {
+        flex-direction: column;
+        gap: 10px;
     }
 }
