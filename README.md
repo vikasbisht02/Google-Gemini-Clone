@@ -1,4 +1,4 @@
-<h1 align="center"> <a href="https://authentication-app-client-tau.vercel.app/">Google Gemini App Clone 🔒</a></h1>
+<h1 align="center"> <a href="https://google-gemini-clone-sand.vercel.app/">Google Gemini App Clone 🔒</a></h1>
 
 ![Demo App](/Google-Gemini-Clone/public/screenshot-for-readme.png)
 
